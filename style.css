@@ -45,18 +45,28 @@ body{
 .img{
     width: 80%;
     /* flex: 1; */
-    height: 95%;
+    margin-top: 4rem;
+    height: 90%;
     background: url("./greek2.png");
     /* background: url("./greek.png"); */
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-    margin: auto;
+    margin-inline: auto;
     transform: rotate(1.6deg);
 }
 
 
-
+button{
+    font-size: larger;
+    padding: 14px 24px;
+    width: 100%;
+    border-radius: 100vw;
+    outline: none;
+    border: none;
+    background: black;
+    color: white;
+}
 
 .container{
     height: 100vh;
