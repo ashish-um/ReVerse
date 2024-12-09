@@ -5,17 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReVerse 8.0</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <div class="container">
-        <div class="funnel" style="padding: 20px;">
+    <!-- <div class="custom-cursor" id="cursor"></div> -->
+    <div class="section container">
+
+        <div class="bg-effect">
+            <div class="circle" id="circle"></div>
+            <div class="funnel background-text">
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
+            </div>
+          </div>
+
+        <div class="funnel outskirts" style="padding: 20px;">
             <p class="funnel" style="font-size: larger;">“You may write me down in history. With your bitter, twisted lies. You may trod me in the very dirt. But still, like dust, I’ll rise.”</p>
             <p class="funnel" style="text-align: end;">- Maya Angelou</p>
-            <br><br><br>
-            <p class="funnel" style="font-size: larger;">“Shall I compare thee to a summer’s day?
-                Thou art more lovely and more temperate.”</p>
-            <p class="funnel" style="text-align: end;">- William Shakespeare</p>
             <br><br>
+
             
             <hr>
 
@@ -27,9 +46,9 @@
                 <br><br>
                 ReVerse has witnessed several awe-inspiring, mountain-moving, spine-chilling, hair-raising and life-changing performances.
             </p>
-            <br><br><br>
-            <button class="rubik">Register</button>
-
+            <br>
+            <!-- <button class="rubik">Register</button> -->
+            
         </div>
         <div class="main" style="display: flex; flex-direction: column;">
             <div>
@@ -43,12 +62,12 @@
                 <!-- <div class="img"></div> -->
             </div>
         </div>
-        <div class="funnel" style="display: flex; flex-direction: column; justify-content: space-between; padding: 20px;">
+        <div class="funnel outskirts" style="display: flex; flex-direction: column; justify-content: space-between; padding: 20px;">
             <div class="top">
-                <h1><u>Home</u></h1>
-                <h1><u>About</u></h1>
-                <h1><u>Sponsor</u></h1>
-                <h1><u>Register</u></h1>
+                <h1><a class="nav-link" href="">Home</a></h1>
+                <h1><a class="nav-link" href="">About</a></h1>
+                <h1><a class="nav-link" href="">Sponsor</a></h1>
+                <h1><a class="nav-link" href="">Register</a></h1>
             </div>
             <div class="bottom">
                 <p style="color: #371262;"><u>Instagram &#8599;</u></p>
@@ -59,5 +78,73 @@
             </div>
         </div>
     </div>
+    
+    <div class="section video-section" style="background: green;">
+        <button class="rubik video-btn">
+            <!-- <center>
+        
+                <a href="#" class="link">
+                    <svg viewBox='0 0 200 200' width='200' height='200' xmlns='http://www.w3.org/2000/svg' class="link__svg" aria-labelledby="link1-title link1-desc">
+                        <title id="link1-title">Come quick and Register</title>
+                    <desc id="link1-desc">A rotating link with text placed around a circle with an arrow inside</desc>
+            
+                    <path id="link-circle" class="link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" stroke="none" fill="none" />
+                    
+                    <path class="link__arrow" d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115"  fill="none" />
+                    
+                    <text class="link__text">
+                        <textPath href="#link-circle" stroke="none">
+                            Come quick and Register
+                        </textPath>
+                    </text>
+                </svg>
+            </a>
+            </center> -->
+            Register
+        </button>
+        <div class="vid-div ">
+            <video src="./assets/vid2.mp4" autoplay muted loop></video>
+        </div>
+
+    </div>
+    <div class="section" style="background: purple;"></div>
+    <div class="section" style="background: plum;"></div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.fromTo(
+            ".video-btn",
+            { opacity: 0, y: 50 },
+            {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power1.out",
+            scrollTrigger: {
+                trigger: ".video-btn", 
+                start: "bottom 80%",
+                end: "bottom 80%", 
+                scrub: true, 
+            },
+            }
+        );
+
+        gsap.to("video", {
+            scrollTrigger: {
+            trigger: ".video-section",
+            start: "top bottom", 
+            end: "top top", 
+            scrub: true, 
+            },
+            height: "900px",
+            ease: "power1.out"
+        });
+        </script>
+
+      <script src="circle.js"></script>
+      
 </body>
 </html>
