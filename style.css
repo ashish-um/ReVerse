@@ -54,7 +54,7 @@ body{
 
 .bg-effect{
     position: absolute;
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100vw;
     height: 100%;
     top: 0;
