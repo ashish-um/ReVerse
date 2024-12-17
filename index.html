@@ -5,34 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReVerse 8.0</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="icon" href="./assets/logo.png" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!-- <div class="custom-cursor" id="cursor"></div> -->
-    <div class="container">
+    <div class="last-scrolling-section orange-bg">
+          <div class="container">
 
-        <div class="bg-effect">
-            <div class="circle" id="circle"></div>
-            <div class="funnel background-text">
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-                ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse ReVerse  <br>
-            </div>
-          </div>
           
         <div class="funnel outskirts" style="padding: 20px;">
             <p class="funnel" style="font-size: larger;">“You may write me down in history. With your bitter, twisted lies. You may trod me in the very dirt. But still, like dust, I’ll rise.”</p>
@@ -56,7 +36,7 @@
         </div>
         <div class="main" style="display: flex; flex-direction: column;">
             <div>
-                <h1 class="h1main breathe-animation">REVERsE 8.o</h1>
+                <h1 class="breathe-animation">REVERsE 8.o</h1>
                 <p class="funnel" style="text-align: end; margin-right: 10rem; font-size: larger; color: rgb(6, 22, 36);"><u>Pune's Biggest <span style="font-family: Schoolbell; background: rgb(76, 86, 228); color: white; padding-inline: 5px; border-radius: 6px;"> Slam Poetry</span> Event</u></p>
                 <!-- <h1 class="rubik h1shadow">ReVerse</h1> -->
             </div>
@@ -86,9 +66,12 @@
                 <p style="margin-top: 1rem;">Army Institute of Technology, Alandi Road, Dighi, Pune 411015</p>
             </div>
         </div>
+        </div>
+        <div class="torn-paper"></div>
     </div>
     
-    <div class="section video-section" style="background: green;">
+    
+    <div class="section video-section reveal-section" style="background: rgb(47, 123, 198);">
         <button class="rubik video-btn">
             <!-- <center>
         
@@ -111,45 +94,104 @@
             </center> -->
             Register
         </button>
-        <div class="vid-div ">
-            <video src="./assets/output.mp4" autoplay muted loop height="600"></video>
-        </div>
+        <!-- <div class="vid-div">
+            <video src="./assets/output.mp4" autoplay muted loop></video>
+        </div> -->
 
     </div>
-    <div class="section" style="background: purple;"></div>
-    <div class="section" style="background: plum;"></div>
+    <div class="section" style="background: rgb(47, 123, 198);">
+        <h1 style="text-align: center; color: white; font-size: 60px;" class="funnel">Some Content</h1>
+    </div>
+    <div class="section" style="background: rgb(47, 123, 198);">
+        <h1 style="text-align: center; color: white; font-size: 60px;" class="funnel">Some More Content</h1>
+    </div>
+    <div class="section clouds sticky-section" style="z-index: -1;"></div>
+    <div class="shep">
+        <h1 class="funnel">Made with Love by Magboard</h1>
+    </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+
+    <script>
+        const lenis = new Lenis({
+            duration: 1.4,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+            direction: 'vertical', // vertical, horizontal
+            gestureDirection: 'vertical', // vertical, horizontal, both
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 1,
+            infinite: false,
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+    
         <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.fromTo(
-            ".video-btn",
-            { opacity: 0, y: 50 },
-            {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power1.out",
+        // gsap.fromTo(
+        //     ".video-btn",
+        //     { opacity: 0, y: 50 },
+        //     {
+        //     opacity: 1,
+        //     y: 0,
+        //     duration: 1,
+        //     ease: "power1.out",
+        //     scrollTrigger: {
+        //         trigger: ".video-btn", 
+        //         start: "bottom 80%",
+        //         end: "bottom 80%", 
+        //         scrub: true, 
+        //     },
+        //     }
+        // );
+        
+        gsap.to(".video-section", {
+            yPercent: -100, 
+            ease: "none",
             scrollTrigger: {
-                trigger: ".video-btn", 
-                start: "bottom 80%",
-                end: "bottom 80%", 
-                scrub: true, 
-            },
-            }
-        );
+            trigger: ".orange-bg",
+            start: "bottom top",
+            end: "+=100%",
+            pinSpacing:false,
+            scrub: true,
+            pin: true,
+            //  markers:true
+        }});
 
-        gsap.to("video", {
+
+        
+        // gsap.to("video", {
+        //     scrollTrigger: {
+        //     trigger: ".video-section",
+        //     start: "top bottom", 
+        //     end: "top top", 
+        //     scrub: true, 
+        //     },
+        //     height: "900px",
+        //     ease: "power1.out"
+        // });
+
+        gsap.to(".sticky-section", {
+            yPercent:-100,
             scrollTrigger: {
-            trigger: ".video-section",
-            start: "top bottom", 
-            end: "top top", 
-            scrub: true, 
-            },
-            height: "900px",
-            ease: "power1.out"
+            trigger: ".sticky-section",
+            start: "top bottom", // Start when the top of the section hits the bottom of the viewport
+            end: "", // End when the bottom of the section hits the bottom of the viewport
+            pin: true, // Stick the section
+            scrub: true, // Smooth scrolling
+            pinSpacing:false,
+            // markers:true
+        }
         });
         </script>
 

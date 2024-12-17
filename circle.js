@@ -19,7 +19,8 @@ function animate() {
   // Interpolate the circle position toward the target position
   circleX += (targetX - circleX) * smoothness;
   circleY += (targetY - circleY) * smoothness;
-
+  
+  console.log(circleY)
   // Update the circle position, offset by half its size
   circle.style.transform = `translate(${circleX - circleSize / 2}px, ${circleY - circleSize / 2}px)`;
 
