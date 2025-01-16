@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Funnel+Display:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Galindo&family=Playwrite+AU+SA:wght@100&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     /* cursor: none; */
 }
+
 a {
 	text-decoration: none;
 	color: #18272F;
@@ -34,7 +37,7 @@ a {
     height: 100%;
   }
 body{
-    background: rgb(47, 123, 198);
+    background: rgb(0, 0, 0);
     line-height: 1.5;
     /* cursor: none; */
     overflow-x: hidden;
@@ -51,6 +54,10 @@ body{
     font-family: "Funnel Display", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+
+}
+.header{
+  font-size: 60px;
 }
 
 .bg-effect{
@@ -88,11 +95,7 @@ body{
     }
   }
 
-/* .hider{
-    width: 100vw;
-    height: 100vh;
-    background: #f5f5f5;
-} */
+
 .circle {
   position: fixed;
   top: 0;
@@ -123,9 +126,6 @@ body{
   width: 100%;
   height: 100%;
   background: rgb(83, 158, 200)
-  /* background: inherit; */
-  /* backdrop-filter: blur(10px); */
-  /* mix-blend-mode: lighten; */
 }
 
   
@@ -144,7 +144,68 @@ body{
     background-position: bottom;
     background-repeat: no-repeat;
     margin-inline: auto;
+    
     /* transform: rotate(1.6deg); */
+}
+.img1 {
+  width: 100%;
+  height: 100%; /* Ensures the image fills the container */
+  background: url("./assets/Just one meow away (3).png");
+  background-size: contain; /* Ensures no repetition and scales the image proportionally */
+  background-repeat: no-repeat;
+  background-position: center; /* Centers the image */
+  position: relative;
+  
+}
+
+.img2 {
+  width: 100%;
+  height: 100%; 
+  background: url("./assets/SIMPLE.png");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+
+}
+
+.img3{
+  width: 100%;
+  height: 100%; 
+  background: url("./assets/winner.png");
+  background-size: contain; 
+  background-repeat: no-repeat;
+ 
+  
+
+
+}
+
+.maggies{
+  width: auto;
+  height: 500px; 
+  background: url("./assets/maggies.jpeg");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  
+
+
+}
+.container{
+  display: grid;
+  position: relative;
+  min-height: 900px;
+  background: #FFF;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+.section{
+  
+  padding: 1px;
+  
+  height: 900px;
+   
+    
+
 }
 .reveal-section{
   
@@ -153,42 +214,90 @@ body{
   width:100%;
 
 }
-.section{
-    height: 900px;
 
+/* .orange-bg {
+  
+  padding-bottom: 100vh; 
+  
+} */
+
+
+.vid-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container{
-    display: grid;
-    position: relative;
-    min-height: 900px;
-    background: #FFF;
-    grid-template-columns: 1fr 3fr 1fr;
+.vid-div video {
+
+  
+  height: auto;
+  max-width: 100%; /* Ensure the video scales appropriately */
+  object-fit: cover; /* Maintain aspect ratio and fill the container */
 }
 
-.vid-div{
-    /* position: absolute; */
-    /* width: 100vw;
-    top: 0;
-    left: 0;
-    z-index: 0; */
-    height: 100%;
-    overflow: hidden;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    video{
-      height: inherit;
-    }
+.video-section{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  
+  button{
+      position: absolute;
+      text-transform: uppercase;
+      /* text-shadow: 5px 5px 0px black;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black; */
+      
+      background: rgba(255, 255, 255, 0);
+      padding: 5px 50px;
+      /* border-radius: 50vw; */
+      color: white;
+      left: 50%;
+      /* width: 100vw; */
+      top: 50%;
+      /* border: 1px solid; */
+      border: 0;
+      outline: none;
+      transform: translate(-50%, -50%);
+      border-top: 0px transparent;
+      border-bottom: 0px transparent;
+      font-size: 50px;
+      z-index: 2;
+      transition: all 0.2s;
+      
+  }
 }
+
 .last-scrolling-section{
   margin-bottom: 100vh;
   position: relative;
   z-index: 1;
+  
 }
-
+.square {
+  width:800px; 
+  height: fit-content;
+  background-color: rgb(50, 49, 49);
+  color: rgb(255, 255, 255); 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  padding: 20px; /* Inner spacing */
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  font-family: Arial, sans-serif; 
+  margin: 20px auto; 
+}
 
 .clouds{
   background: url("./assets/clouds.png");
@@ -196,6 +305,7 @@ body{
   background-position: center top;
   background-size: cover;
   z-index: -1;
+
   /* padding-top: 300px; */
   /* min-width: 1920px; */
 }
@@ -220,41 +330,17 @@ body{
   /* min-width: 1920px; */
 }
 
-.video-section{
-    position:fixed;
-    top:0px;
-    width:100%;
-    /* position: relative; */
-    /* position: sticky; */
-    /* top: 0; */
-    /* z-index: -2; */
-    height: 100vh;
-    button{
-        position: absolute;
-        text-transform: uppercase;
-        /* text-shadow: 5px 5px 0px black;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: black; */
-        
-        background: rgba(255, 255, 255, 0);
-        padding: 5px 50px;
-        /* border-radius: 50vw; */
-        color: white;
-        left: 50%;
-        /* width: 100vw; */
-        top: 50%;
-        /* border: 1px solid; */
-        border: 0;
-        outline: none;
-        transform: translate(-50%, -50%);
-        border-top: 0px transparent;
-        border-bottom: 0px transparent;
-        font-size: 50px;
-        z-index: 2;
-        transition: all 0.2s;
-        
-    }
+.winners{
+  width: 100%;
+  height: 100%; 
+  background: url("./assets/winner.gif");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative; bottom: 350px; right:150px;
+
 }
+
 
     /* The @font-face rule is used to define a custom font that you want to use on your webpage. Here 'TheFont' is a name we give to reference the font later in CSS. The 'src' property specifies the path to the font file, and 'format' specifies the font format. */
     @font-face {
@@ -354,49 +440,197 @@ body{
 } */
 
 .outskirts:nth-child(3){
-  display: flex; flex-direction: column; justify-content: space-between; padding: 20px;
+  display: flex; flex-direction: column; justify-content: space-between; padding: 20px;align-items: center;
 }
+
+
+.top {
+  position: absolute;
+  width: max-content;
+  z-index: 1;
+  top: 0; /* Stick to the top of the viewport */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+   /* Space between links */
+  padding: 10px 20px;
+ 
+}
+.neonText {
+  font-family: "Vibur", sans-serif;
+  font-size: x-large;
+  
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(255, 255, 255),
+      0 0 82px rgb(255, 255, 255),
+      0 0 92px rgb(255, 255, 255),
+      0 0 102px rgb(255, 255, 255),
+      0 0 151px rgb(255, 255, 255);
+}
+
+.box{
+  width: 100%;
+  height: 60px;
+  background-color: black;
+}
+.logo {
+  position: relative;
+  width: 288px;
+  height: 60px;
+ 
+  background: url("./assets/magboard.png");
+  z-index: 2;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
 
 @media only screen and (max-width: 700px) {
   .outskirts{
     display: none !important;
   }
 
+
+  .box{
+    width: 320px;
+  }
+  .section{
+    height: auto;
+    width: 100%;
+  }
+  .maggies{
+    width: auto;
+    height: 300px;
+  }
   .breathe-animation{
     /* width: 100%; */
     font-size: 9vw !important;
   }
 
+
+
+  .orange-bg{
+    padding-bottom: 20vh;
+  }
+  
+
+
+
+
+
+  .img{
+    position: relative;
+    bottom: 100px;
+  }
+  .img1{
+    max-width: 100%;
+    height: 40%;
+  }
+
+  .img3{
+    max-width: 100%; /* Makes images flexible on smaller screens */
+    height: 320px;
+    z-index: 2;
+    left: 40px;
+    bottom: 90px;
+
+  }
+  .winners{
+  width: 100%;
+  height: 300px; 
+  background: url("./assets/winner.gif");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative; 
+  bottom: 0px;
+  right: 0px;
+
+
+
+  }
+  .last-scrolling-section.orange-bg > .container{
+    grid-template-columns: 1fr;
+    min-height: 900px;
+    width: 100%;
+  }
+
   .container{
     grid-template-columns: 1fr;
     min-height: 500px;
+    width: 100%;
   }
 
-  .img{
-    margin-top: 0;
-    height: 400px;
+  
+  .square {
+    width: 80%; 
+    height: auto; 
+    padding: 15px; 
+    font-size: 8px;
   }
 
+  .prices .funnel
+  {
+    font-size: 10px;
+    position: relative;
+    left: 20px;
+  }
 
+  .prices{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .header{
+    position: relative;
+    left: 20px;
+    font-size: 20px; /* Adjust font size for mobile */
+    
+  }
+  
+
+  
+  
+.vid-div video {
+  width: 100%;
+  height: 192px;
+}
+ 
+ 
+.video-section{
+  height: auto;
+ 
+  
+}
+.prices .neonText {
+  font-size: small;
+  position: relative;
+    left: 20px;
+  
+
+}
+.neonText {
+  font-size: medium;
+  
+  
+
+}
 }
 
 @media only screen and (min-width: 700px) {
   .for-mobile{
     display: none;
   }
+  .custom-cursor {
+    display: none;}
+  
+  
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 .link {
@@ -474,3 +708,4 @@ body{
         transform: rotate(-360deg);
     }
 }
+
